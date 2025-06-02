@@ -58,7 +58,7 @@ export const Navbar = () => {
 
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4">
-            <Link href="/dashboard" passHref>
+            <Link href="/login" passHref>
               <Button 
                 variant="ghost" 
                 className="text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
@@ -66,7 +66,7 @@ export const Navbar = () => {
                 🔑 Login
               </Button>
             </Link>
-            <Link href="/dashboard" passHref>
+            <Link href="/signup" passHref>
               <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg neon-glow transition-all duration-300 transform hover:scale-105">
                 ⭐ Sign Up
               </Button>

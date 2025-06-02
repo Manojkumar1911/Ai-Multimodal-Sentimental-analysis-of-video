@@ -42,12 +42,14 @@ export default function SignupPage() {
       });
 
       if (!signInResult?.error) {
-        router.push("/");
+        console.log("Signup successful, redirecting to dashboard...");
+        router.push("/dashboard");
       } else {
-        setError("Failed to sign in");
+        setError("Failed to sign in after registration");
       }
     } catch (error) {
-      setError("Something went wrong");
+      console.error("Signup error:", error);
+      setError("Something went wrong during signup");
     } finally {
       setLoading(false);
     }

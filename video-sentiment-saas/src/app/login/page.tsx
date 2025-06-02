@@ -35,11 +35,11 @@ export default function LoginPage() {
       console.log("Sign in result:", result);
 
       if (result?.ok && !result.error) {
-        console.log("Login successful, redirecting...");
+        console.log("Login successful, redirecting to dashboard...");
         // First refresh the router to ensure auth state is updated
         router.refresh();
-        // Then redirect to home page
-        router.push("/");
+        // Then redirect to dashboard page
+        router.push("/dashboard");
       } else {
         console.error("Login failed:", result?.error);
         setError(result?.error || "Invalid email or password");
